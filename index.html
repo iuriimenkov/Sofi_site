@@ -30,47 +30,41 @@
         <p class="eyebrow">Салон красоты · Нижний Новгород</p>
         <h1 class="hero__title">Софи</h1>
         <p class="hero__text">Волосы, ногти и VIP-зал в самом центре города — на Большой Покровской.</p>
-        <a href="#services" class="btn">Записаться</a>
+        <button type="button" class="btn" data-open="choose">Записаться</button>
       </div>
     </section>
 
     <section class="section" id="services">
       <div class="container">
         <h2 class="section__title">Запись</h2>
-        <p class="section__lead">Выберите направление и позвоните мастеру напрямую.</p>
+        <p class="section__lead">Выберите направление — оставьте заявку или позвоните нам.</p>
 
         <div class="cards">
           <article class="card card--hair">
-            <span class="card__num">01</span>
             <h3 class="card__title">Парикмахеры</h3>
             <ul class="card__list">
               <li>Окрашивание</li>
               <li>Стрижка</li>
             </ul>
-            <a class="btn btn--outline js-phone" data-contact="hair">Записаться</a>
-            <p class="card__phone js-phone-text" data-contact="hair"></p>
+            <button type="button" class="btn btn--outline" data-open="hair">Записаться</button>
           </article>
 
           <article class="card card--nails">
-            <span class="card__num">02</span>
             <h3 class="card__title">Ногтевой сервис</h3>
             <ul class="card__list">
               <li>Маникюр</li>
               <li>Педикюр</li>
             </ul>
-            <a class="btn btn--outline js-phone" data-contact="nails">Записаться</a>
-            <p class="card__phone js-phone-text" data-contact="nails"></p>
+            <button type="button" class="btn btn--outline" data-open="nails">Записаться</button>
           </article>
 
           <article class="card card--vip">
-            <span class="card__num">03</span>
             <h3 class="card__title">VIP-зал</h3>
             <ul class="card__list">
               <li>Парикмахеры</li>
               <li>Отдельный зал</li>
             </ul>
-            <a class="btn btn--gold js-phone" data-contact="vip">Записаться</a>
-            <p class="card__phone js-phone-text" data-contact="vip"></p>
+            <button type="button" class="btn btn--gold" data-open="vip">Записаться</button>
           </article>
         </div>
       </div>
@@ -96,9 +90,8 @@
     <section class="section section--career" id="career">
       <div class="container career">
         <h2 class="section__title">Работа в «Софи»</h2>
-        <p class="section__lead">Ищем мастеров в команду. Звоните — расскажем об условиях.</p>
-        <a class="btn btn--gold js-phone" data-contact="career">Позвонить</a>
-        <p class="card__phone js-phone-text" data-contact="career"></p>
+        <p class="section__lead">Ищем мастеров в команду. Оставьте отклик — расскажем об условиях.</p>
+        <button type="button" class="btn btn--gold" data-open="career">Откликнуться</button>
       </div>
     </section>
 
@@ -110,6 +103,14 @@
       <span>Большая Покровская, 71А, 3 этаж</span>
     </div>
   </footer>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button type="button" class="modal__close" data-close aria-label="Закрыть">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
 
   <script src="config.js"></script>
   <script src="script.js"></script>
