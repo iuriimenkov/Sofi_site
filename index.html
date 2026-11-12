@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Софи — салон красоты в Нижнем Новгороде</title>
+  <meta name="description" content="Салон красоты «Софи» на Большой Покровской, 71А. Окрашивание и стрижки, маникюр и педикюр, VIP-зал.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo">Софи</a>
+      <nav class="nav">
+        <a href="#services">Услуги</a>
+        <a href="#contacts">Контакты</a>
+        <a href="#career">Вакансии</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="container hero__inner">
+        <p class="eyebrow">Салон красоты · Нижний Новгород</p>
+        <h1 class="hero__title">Софи</h1>
+        <p class="hero__text">Волосы, ногти и VIP-зал в самом центре города — на Большой Покровской.</p>
+        <a href="#services" class="btn">Записаться</a>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="section__title">Запись</h2>
+        <p class="section__lead">Выберите направление и позвоните мастеру напрямую.</p>
+
+        <div class="cards">
+          <article class="card">
+            <span class="card__num">01</span>
+            <h3 class="card__title">Парикмахеры</h3>
+            <ul class="card__list">
+              <li>Окрашивание</li>
+              <li>Стрижка</li>
+            </ul>
+            <a class="btn btn--outline js-phone" data-contact="hair">Записаться</a>
+            <p class="card__phone js-phone-text" data-contact="hair"></p>
+          </article>
+
+          <article class="card">
+            <span class="card__num">02</span>
+            <h3 class="card__title">Ногтевой сервис</h3>
+            <ul class="card__list">
+              <li>Маникюр</li>
+              <li>Педикюр</li>
+            </ul>
+            <a class="btn btn--outline js-phone" data-contact="nails">Записаться</a>
+            <p class="card__phone js-phone-text" data-contact="nails"></p>
+          </article>
+
+          <article class="card card--vip">
+            <span class="card__num">03</span>
+            <h3 class="card__title">VIP-зал</h3>
+            <ul class="card__list">
+              <li>Парикмахеры</li>
+              <li>Отдельный зал</li>
+            </ul>
+            <a class="btn js-phone" data-contact="vip">Записаться</a>
+            <p class="card__phone js-phone-text" data-contact="vip"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="contacts">
+      <div class="container contacts">
+        <div class="contacts__info">
+          <h2 class="section__title">Как нас найти</h2>
+          <p class="contacts__address">
+            Нижний Новгород,<br>
+            Большая Покровская улица, 71А,<br>
+            3 этаж
+          </p>
+          <a class="btn btn--outline" href="https://yandex.ru/maps/org/sofi/1091689280?si=3yv9qwzgn5ad5eufneq0ejkxfc" target="_blank" rel="noopener">Открыть в Яндекс Картах</a>
+        </div>
+        <div class="contacts__map">
+          <iframe src="https://yandex.ru/map-widget/v1/org/sofi/1091689280/" title="Салон «Софи» на карте" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="career">
+      <div class="container career">
+        <h2 class="section__title">Работа в «Софи»</h2>
+        <p class="section__lead">Ищем мастеров в команду. Звоните — расскажем об условиях.</p>
+        <a class="btn btn--outline js-phone" data-contact="career">Позвонить</a>
+        <p class="card__phone js-phone-text" data-contact="career"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="logo logo--small">Софи</span>
+      <span>Большая Покровская, 71А, 3 этаж</span>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
