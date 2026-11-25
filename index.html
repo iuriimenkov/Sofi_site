@@ -3,95 +3,135 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Софи — салон красоты в Нижнем Новгороде</title>
-  <meta name="description" content="Салон красоты «Софи» на Большой Покровской, 71А. Окрашивание и стрижки, маникюр и педикюр, VIP-зал.">
+  <title>Мастерская красоты «Софи» — Нижний Новгород, Большая Покровская, 71А</title>
+  <meta name="description" content="Мастерская красоты «Софи» в центре Нижнего Новгорода: косметология, ногтевая студия, массаж, студия загара, парикмахерский зал и VIP-зал. Большая Покровская, 71А, 3 этаж. С 9:00 до 21:00.">
+  <meta name="theme-color" content="#5e1a26">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600&family=Marck+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <header class="header">
     <div class="container header__inner">
-      <a href="#top" class="logo">Софи</a>
-      <nav class="nav">
+      <a href="#top" class="logo" aria-label="Мастерская красоты «Софи»">
+        <span class="logo__small">мастерская красоты</span>
+        <span class="logo__name">Софи</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#about">О салоне</a>
         <a href="#services">Услуги</a>
-        <a href="#contacts">Контакты</a>
+        <a href="#prices">Цены и акции</a>
+        <a href="#reviews">Отзывы</a>
         <a href="#career">Вакансии</a>
+        <a href="#contacts">Контакты</a>
       </nav>
+      <div class="header__right">
+        <a class="header__phone js-phone" data-i="0"></a>
+        <button type="button" class="btn btn--small" data-open="choose">Записаться</button>
+        <button type="button" class="burger" aria-label="Меню" aria-controls="nav"><span></span><span></span></button>
+      </div>
     </div>
   </header>
 
   <main id="top">
 
+    <!-- Главный экран -->
     <section class="hero">
       <div class="container hero__inner">
-        <p class="eyebrow">Салон красоты · Нижний Новгород</p>
+        <p class="hero__eyebrow">мастерская красоты</p>
         <h1 class="hero__title">Софи</h1>
-        <p class="hero__text">Волосы, ногти и VIP-зал в самом центре города — на Большой Покровской.</p>
-        <button type="button" class="btn" data-open="choose">Записаться</button>
+        <p class="hero__text">Косметология, ногти, массаж, загар и&nbsp;парикмахерский зал — в&nbsp;самом центре Нижнего Новгорода.</p>
+        <div class="hero__actions">
+          <button type="button" class="btn" data-open="choose">Записаться</button>
+          <a class="btn btn--ghost js-phone-btn" data-i="0">Позвонить</a>
+        </div>
+        <ul class="hero__facts">
+          <li><span>Адрес</span>Б. Покровская, 71А, 3&nbsp;этаж</li>
+          <li><span>Часы работы</span>с 9:00 до 21:00</li>
+          <li><span>Телефон</span><a class="js-phone" data-i="0"></a></li>
+        </ul>
       </div>
     </section>
 
-    <section class="section" id="services">
-      <div class="container">
-        <h2 class="section__title">Запись</h2>
-        <p class="section__lead">Выберите направление — оставьте заявку или позвоните нам.</p>
-
-        <div class="cards">
-          <article class="card card--hair">
-            <h3 class="card__title">Парикмахеры</h3>
-            <ul class="card__list">
-              <li>Окрашивание</li>
-              <li>Стрижка</li>
-            </ul>
-            <button type="button" class="btn btn--outline" data-open="hair">Записаться</button>
-          </article>
-
-          <article class="card card--nails">
-            <h3 class="card__title">Ногтевой сервис</h3>
-            <ul class="card__list">
-              <li>Маникюр</li>
-              <li>Педикюр</li>
-            </ul>
-            <button type="button" class="btn btn--outline" data-open="nails">Записаться</button>
-          </article>
-
-          <article class="card card--vip">
-            <h3 class="card__title">VIP-зал</h3>
-            <ul class="card__list">
-              <li>Парикмахеры</li>
-              <li>Отдельный зал</li>
-            </ul>
-            <button type="button" class="btn btn--gold" data-open="vip">Записаться</button>
-          </article>
+    <!-- О салоне -->
+    <section class="section" id="about">
+      <div class="container about">
+        <h2 class="section__title">О салоне</h2>
+        <div class="about__text">
+          <p>«Софи» — мастерская красоты на Большой Покровской. Под одной крышей — врачебная и&nbsp;эстетическая косметология, ногтевая студия, массаж, студия загара, парикмахерский зал и&nbsp;отдельный VIP-зал.</p>
+          <p>Выберите услугу ниже и&nbsp;оставьте заявку — администратор свяжется с&nbsp;вами и&nbsp;подберёт удобное время.</p>
         </div>
       </div>
     </section>
 
-    <section class="section section--contacts" id="contacts">
+    <!-- Услуги -->
+    <section class="section section--tint" id="services">
+      <div class="container">
+        <h2 class="section__title">Услуги</h2>
+        <p class="section__lead">Нажмите на направление, чтобы записаться.</p>
+        <div class="services" id="services-grid"></div>
+      </div>
+    </section>
+
+    <!-- Цены и акции -->
+    <section class="section" id="prices">
+      <div class="container band">
+        <div>
+          <h2 class="section__title">Цены и акции</h2>
+          <p class="section__lead">Стоимость зависит от услуги и&nbsp;мастера. Актуальные цены и&nbsp;акции подскажет администратор.</p>
+        </div>
+        <div class="band__actions">
+          <a class="btn js-phone-btn" data-i="0">Узнать цену</a>
+          <button type="button" class="btn btn--outline" data-open="gift">Подарочный сертификат</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="section section--gold" id="reviews">
+      <div class="container reviews">
+        <p class="reviews__quote" aria-hidden="true">“</p>
+        <h2 class="section__title">Отзывы</h2>
+        <p class="section__lead">Почитайте, что пишут о нас гости, и&nbsp;оставьте свой отзыв на&nbsp;Яндекс Картах.</p>
+        <a class="btn js-reviews" target="_blank" rel="noopener">Читать отзывы</a>
+      </div>
+    </section>
+
+    <!-- Вакансии -->
+    <section class="section" id="career">
+      <div class="container band">
+        <div>
+          <h2 class="section__title">Работа в «Софи»</h2>
+          <p class="section__lead">Ищем мастеров в&nbsp;команду. Оставьте отклик — расскажем об&nbsp;условиях.</p>
+        </div>
+        <div class="band__actions">
+          <button type="button" class="btn" data-open="career">Откликнуться</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="section section--wine" id="contacts">
       <div class="container contacts">
         <div class="contacts__info">
-          <h2 class="section__title">Как нас найти</h2>
-          <p class="contacts__address">
-            Нижний Новгород,<br>
-            Большая Покровская улица, 71А,<br>
-            3 этаж
-          </p>
-          <a class="btn btn--outline" href="https://yandex.ru/maps/org/sofi/1091689280?si=3yv9qwzgn5ad5eufneq0ejkxfc" target="_blank" rel="noopener">Открыть в Яндекс Картах</a>
+          <h2 class="section__title">Контакты</h2>
+          <dl class="contacts__list">
+            <dt>Адрес</dt>
+            <dd>Нижний Новгород,<br>Большая Покровская, 71А, 3&nbsp;этаж</dd>
+            <dt>Часы работы</dt>
+            <dd>с 9:00 до 21:00</dd>
+            <dt>Телефоны</dt>
+            <dd class="js-phones"></dd>
+            <dt>Почта</dt>
+            <dd><a class="js-email"></a></dd>
+          </dl>
+          <a class="btn btn--gold js-map" target="_blank" rel="noopener">Открыть в Яндекс Картах</a>
         </div>
         <div class="contacts__map">
-          <iframe src="https://yandex.ru/map-widget/v1/org/sofi/1091689280/" title="Салон «Софи» на карте" loading="lazy" allowfullscreen></iframe>
+          <iframe src="https://yandex.ru/map-widget/v1/org/sofi/1091689280/" title="«Софи» на карте" loading="lazy" allowfullscreen></iframe>
         </div>
-      </div>
-    </section>
-
-    <section class="section section--career" id="career">
-      <div class="container career">
-        <h2 class="section__title">Работа в «Софи»</h2>
-        <p class="section__lead">Ищем мастеров в команду. Оставьте отклик — расскажем об условиях.</p>
-        <button type="button" class="btn btn--gold" data-open="career">Откликнуться</button>
       </div>
     </section>
 
@@ -99,11 +139,12 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <span class="logo logo--small">Софи</span>
-      <span>Большая Покровская, 71А, 3 этаж</span>
+      <span class="logo logo--footer"><span class="logo__small">мастерская красоты</span><span class="logo__name">Софи</span></span>
+      <span>Б. Покровская, 71А, 3 этаж · с 9:00 до 21:00</span>
     </div>
   </footer>
 
+  <!-- Окно записи -->
   <div class="modal" id="modal" hidden>
     <div class="modal__backdrop" data-close></div>
     <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
