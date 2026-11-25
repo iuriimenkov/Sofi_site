@@ -39,6 +39,11 @@ button { font: inherit; }
 .logo__small { white-space: nowrap; font-family: var(--serif); font-style: italic; font-size: 13px; letter-spacing: .06em; margin-bottom: 2px; }
 .logo__name { font-family: var(--script); font-size: 34px; }
 
+.logo__img { display: block; height: 46px; width: auto; }
+.logo__img--footer { height: 52px; }
+.hero__logo { margin: 0 auto 26px; max-width: 480px; }
+.hero__logo img { display: block; width: 100%; height: auto; filter: drop-shadow(0 2px 0 rgba(255, 245, 220, .45)); }
+
 /* ---------- Шапка ---------- */
 .header {
   position: sticky; top: 0; z-index: 20;
@@ -246,7 +251,8 @@ button { font: inherit; }
 }
 @media (max-width: 640px) {
   .header__phone { display: none; }
-  .logo__name { font-size: 30px; }
+  .logo__img { height: 40px; }
+  .hero__logo { max-width: 88%; }
   .hero { padding: 80px 0 50px; }
   .hero::after { inset: 10px; border-radius: 20px; }
   .hero__facts { grid-template-columns: 1fr; margin-top: 46px; }
